@@ -83,7 +83,25 @@ class _ProductDetailsState extends State<ProductDetails> {
 //              =======================size button ====================
               Expanded(
                 child: MaterialButton(
-                    onPressed: (){},
+                    onPressed: (){
+                      showDialog(
+                          context: context,
+                        builder: (context) {
+                            return AlertDialog(
+                              title: Text('Size'),
+                              content: Text('Choose the size'),
+                              actions: <Widget>[
+                                MaterialButton(
+                                  onPressed: (){
+                                    Navigator.of(context).pop(context);
+                                  },
+                                  child: Text('Close'),
+                                ),
+                              ],
+                            );
+                        }
+                      );
+                    },
                   color: Colors.white,
                   textColor: Colors.grey,
                   elevation: 0.2,
@@ -102,7 +120,25 @@ class _ProductDetailsState extends State<ProductDetails> {
 //              =======================color button ====================
               Expanded(
                 child: MaterialButton(
-                  onPressed: (){},
+                  onPressed: (){
+                    showDialog(
+                        context: context,
+                        builder: (context) {
+                          return AlertDialog(
+                            title: Text('Colour'),
+                            content: Text('Choose the colour'),
+                            actions: <Widget>[
+                              MaterialButton(
+                                onPressed: (){
+                                  Navigator.of(context).pop(context);
+                                },
+                                child: Text('Close'),
+                              ),
+                            ],
+                          );
+                        }
+                    );
+                  },
                   color: Colors.white,
                   textColor: Colors.grey,
                   elevation: 0.2,
@@ -121,7 +157,25 @@ class _ProductDetailsState extends State<ProductDetails> {
 //              =======================qty button ====================
               Expanded(
                 child: MaterialButton(
-                  onPressed: (){},
+                  onPressed: (){
+                    showDialog(
+                        context: context,
+                        builder: (context) {
+                          return AlertDialog(
+                            title: Text('Quantity'),
+                            content: Text('Choose the quantity'),
+                            actions: <Widget>[
+                              MaterialButton(
+                                onPressed: (){
+                                  Navigator.of(context).pop(context);
+                                },
+                                child: Text('Close'),
+                              ),
+                            ],
+                          );
+                        }
+                    );
+                  },
                   color: Colors.white,
                   textColor: Colors.grey,
                   elevation: 0.2,
@@ -166,6 +220,84 @@ class _ProductDetailsState extends State<ProductDetails> {
                 icon: Icon(
                   Icons.favorite_border,
                   color: Colors.red,
+                ),
+              ),
+            ],
+          ),
+          Divider(),
+          ListTile(
+            title: Text('Product Details'),
+            subtitle: Text(
+              "Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been"
+                  " the industry's standard dummy text ever since the 1500s, when an unknown printer took a"
+                  " galley of type and scrambled it to make a type specimen book. It has survived not only five"
+                  " centuries, but also the leap into electronic typesetting, remaining essentially unchanged. "
+                  "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum "
+                  "passages, and more recently with desktop publishing software like Aldus PageMaker including "
+                  "versions of Lorem Ipsum."
+            ),
+          ),
+          Row(
+            children: <Widget>[
+              Padding(
+                padding: EdgeInsets.fromLTRB(12.0, 5.0, 5.0, 5.0),
+                child: Text(
+                  'Product Name',
+                  style: TextStyle(
+                    color: Colors.grey,
+                  ),
+                ),
+              ),
+              Padding(
+                padding: EdgeInsets.fromLTRB(12.0, 5.0, 5.0, 5.0),
+                child: Text(widget.product_details_name),
+              ),
+
+            ],
+          ),
+          Row(
+            children: <Widget>[
+              Padding(
+                padding: EdgeInsets.fromLTRB(12.0, 5.0, 5.0, 5.0),
+                child: Text(
+                  'Product Brand',
+                  style: TextStyle(
+                    color: Colors.grey,
+                  ),
+                ),
+              ),
+//              TODO: Create product brand
+              Padding(
+                padding: EdgeInsets.fromLTRB(12.0, 5.0, 5.0, 5.0),
+                child: Text(
+                  'Brand x',
+                  style: TextStyle(
+                    color: Colors.grey,
+                  ),
+                ),
+              ),
+
+            ],
+          ),
+          Row(
+            children: <Widget>[
+              Padding(
+                padding: EdgeInsets.fromLTRB(12.0, 5.0, 5.0, 5.0),
+                child: Text(
+                  'Product Condition',
+                  style: TextStyle(
+                    color: Colors.grey,
+                  ),
+                ),
+              ),
+//              TODO: Add product condition
+              Padding(
+                padding: EdgeInsets.fromLTRB(12.0, 5.0, 5.0, 5.0),
+                child: Text(
+                  'Condition x',
+                  style: TextStyle(
+                    color: Colors.grey,
+                  ),
                 ),
               ),
             ],
