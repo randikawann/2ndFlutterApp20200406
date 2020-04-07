@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_second/pages/cart.dart';
 
 class NavigationDrawer extends StatelessWidget {
   @override
@@ -45,10 +46,12 @@ class NavigationDrawer extends StatelessWidget {
             ),
           ),
           InkWell(
-            onTap: () {},
+            onTap: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => Cart()));
+            },
             child: ListTile(
-              title: Text('Categories'),
-              leading: Icon(Icons.dashboard),
+              title: Text('Shopping Cart'),
+              leading: Icon(Icons.shopping_cart),
             ),
           ),
           InkWell(

@@ -21,6 +21,60 @@ class _ProductsState extends State<Products> {
       'oldprice': 100,
       'price': 50,
     },
+    {
+      'name': 'Red Dress2',
+      'picture': 'assets/products/hills1.jpeg',
+      'oldprice': 100,
+      'price': 50,
+    },
+    {
+      'name': 'Red Dress3',
+      'picture': 'assets/products/blazer2.jpeg',
+      'oldprice': 100,
+      'price': 50,
+    },
+    {
+      'name': 'Red Dress4',
+      'picture': 'assets/products/shoe1.jpg',
+      'oldprice': 100,
+      'price': 50,
+    },
+    {
+      'name': 'Red Dress5',
+      'picture': 'assets/products/skt1.jpeg',
+      'oldprice': 100,
+      'price': 50,
+    },
+    {
+      'name': 'Red Dress6',
+      'picture': 'assets/products/pants1.jpg',
+      'oldprice': 100,
+      'price': 50,
+    },
+    {
+      'name': 'Red Dress7',
+      'picture': 'assets/products/dress2.jpeg',
+      'oldprice': 100,
+      'price': 50,
+    },
+    {
+      'name': 'Red Dress8',
+      'picture': 'assets/products/hills2.jpeg',
+      'oldprice': 100,
+      'price': 50,
+    },
+    {
+      'name': 'Red Dress9',
+      'picture': 'assets/products/pants2.jpeg',
+      'oldprice': 100,
+      'price': 50,
+    },
+    {
+      'name': 'Red Dress10',
+      'picture': 'assets/products/skt2.jpeg',
+      'oldprice': 100,
+      'price': 50,
+    },
   ];
 
   @override

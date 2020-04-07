@@ -3,6 +3,7 @@ import 'package:flutter_app_second/components/navigation_drawer.dart';
 import 'package:flutter_app_second/components/image_carousel.dart';
 import 'package:flutter_app_second/components/horizontal_listview.dart';
 import 'package:flutter_app_second/components/products.dart';
+import 'cart.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -29,7 +30,9 @@ class _HomePageState extends State<HomePage> {
           IconButton(
             icon: Icon(Icons.shopping_cart),
             color: Colors.white,
-            onPressed: () {},
+            onPressed: () {
+              Navigator.push(context, MaterialPageRoute(builder: (context) => Cart()));
+            },
           ),
         ],
       ),
