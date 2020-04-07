@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_app_second/components/navigation_drawer.dart';
 import 'package:flutter_app_second/components/image_carousel.dart';
 import 'package:flutter_app_second/components/horizontal_listview.dart';
+import 'package:flutter_app_second/components/products.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -38,9 +39,27 @@ class _HomePageState extends State<HomePage> {
           ImageCarousel(),
           Padding(
             padding: EdgeInsets.all(10.0),
-            child: Text('Categories'),
+            child: Text(
+              'Categories',
+              style: TextStyle(
+                fontSize: 18.0,
+              ),
+            ),
           ),
           HorisontalListView(),
+          Padding(
+            padding: EdgeInsets.fromLTRB(10.0, 20.0, 20.0, 20.0),
+            child: Text(
+              'Recent Products',
+              style: TextStyle(
+                fontSize: 18.0,
+              ),
+            ),
+          ),
+          Container(
+            height: 320.0,
+            child: Products(),
+          ),
         ],
       ),
     );
