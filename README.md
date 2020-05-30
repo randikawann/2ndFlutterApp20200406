@@ -6,6 +6,16 @@ second flutter appplication about about shoping applicatoin
 
 This project is a starting point for a Flutter application.
 
+### 08carrent branch
+Added branch 8 created screenshots and original images which is design in XD...
+
+
+
+<img src = "branchscreenshot/flutter_app_second Screens/screen4xd.png"  height="300" />  <img src = "branchscreenshot/flutter_app_second Screens/screen4flut.png"  height="300" />
+<img src = "branchscreenshot/flutter_app_second Screens/screen3xd.png"  height="300" />  <img src = "branchscreenshot/flutter_app_second Screens/screen3flut.png"  height="300" />
+<img src = "branchscreenshot/flutter_app_second Screens/screen2xd.png"  height="300" />  <img src = "branchscreenshot/flutter_app_second Screens/screen2flut.png"  height="300" />
+<img src = "branchscreenshot/flutter_app_second Screens/screen1xd.png"  height="300" />  <img src = "branchscreenshot/flutter_app_second Screens/screen1flut.png"  height="300" />
+
 ### master branch
 
 <img src = "branchscreenshot/00master.png"  height="300" />
