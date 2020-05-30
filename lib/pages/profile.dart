@@ -27,7 +27,7 @@ class Profile extends StatelessWidget {
                     Text("day trip", style: TextStyle(fontSize: 14.0, color: Colors.white,),),
                   ],
                 ),
-                Text("IN ROUTE", style: TextStyle(fontSize: 13.0, color: Colors.amber,),),
+                Text("IN ROUTE", style: TextStyle(fontSize: 13.0, color: Color(0xffFFDD00),),),
               ],
             ),
           ),
@@ -64,7 +64,7 @@ class Profile extends StatelessWidget {
         children: <Widget>[
           Container(
             padding: EdgeInsets.only(top: 20.0, bottom: 20.0),
-            color: const Color(0xffDCDCDC),
+            color: const Color(0xffF9F9F9),
             child: Stack(
               children: <Widget>[
                 Container(
@@ -73,16 +73,16 @@ class Profile extends StatelessWidget {
                   child: Column(
                     crossAxisAlignment: CrossAxisAlignment.start,
 
-                    children: <Widget>[
-                      Text("Alex", style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold, color: Colors.black),),
+                    children: <Widget>[ // #F9F9F9  color: Color.hex("#183451"),
+                      Text("Alex", style: TextStyle(fontSize: 20.0, fontWeight: FontWeight.bold, color: Colors.black)),
                       SizedBox(width: 9.0,),
                       Text("Very Experienced", style: TextStyle(fontSize: 12.0, fontWeight: FontWeight.bold, color: Colors.black),),
                       Row(
                         children: <Widget>[
-                          Icon(Icons.star, color: Colors.amber, size: 18.0,),
-                          Icon(Icons.star, color: Colors.amber, size: 18.0,),
-                          Icon(Icons.star, color: Colors.amber, size: 18.0,),
-                          Icon(Icons.star, color: Colors.amber, size: 18.0,)
+                          Icon(Icons.star, color: Color(0xffFFDD00), size: 18.0,),
+                          Icon(Icons.star, color: Color(0xffFFDD00), size: 18.0,),
+                          Icon(Icons.star, color: Color(0xffFFDD00), size: 18.0,),
+                          Icon(Icons.star, color: Color(0xffFFDD00), size: 18.0,)
                         ],
                       )
                     ],
@@ -114,8 +114,8 @@ class Profile extends StatelessWidget {
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: <Widget>[
-                      Icon(Icons.airplanemode_active),
-                      SizedBox(width: 15.0,),
+                      Icon(Icons.airplanemode_active, size: 35.0,),
+                      SizedBox(width: 12.0,),
                       Column(
                         crossAxisAlignment: CrossAxisAlignment.start,
                         children: <Widget>[
@@ -129,13 +129,13 @@ class Profile extends StatelessWidget {
                 Column(
                   children: <Widget>[
                     RaisedButton(
-                      child: Text("Edit", style: TextStyle(color: Colors.white),),
-                      color: Colors.blueAccent,
+                      child: Text("Edit", style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 14.0),),
+                      color: Color(0xff395AFF),
                       elevation: 0.0,
                       onPressed: (){},
                       shape: RoundedRectangleBorder(
                           borderRadius: BorderRadius.circular(30.0),
-                          side: BorderSide(color: Colors.white)
+//                          side: BorderSide(color: Colors.white)
                       ),
                     ),
                   ],
@@ -150,6 +150,7 @@ class Profile extends StatelessWidget {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: <Widget>[
                   Text("Travel photos", style: TextStyle(fontSize: 20.0,fontWeight: FontWeight.bold, color: Colors.black)),
+                  SizedBox(height: 8.0,),
                   Text("Photos of her from previoud trips", style: TextStyle(fontSize: 14.0, color: Colors.grey)),
                   SizedBox(height: 20.0,),
                   Expanded(
@@ -180,7 +181,7 @@ class Profile extends StatelessWidget {
       crossAxisAlignment: CrossAxisAlignment.start,
       children: <Widget>[
         Text("Previous Trip", style: TextStyle(fontSize: 20.0,fontWeight: FontWeight.bold, color: Colors.black)),
-        SizedBox(height: 10.0,),
+        SizedBox(height: 8.0,),
         Text("Trips she has taken in the past 12 months", style: TextStyle(fontSize: 14.0, color: Colors.grey)),
         SizedBox(height: 30.0,),
         Expanded(
@@ -200,8 +201,8 @@ class Profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
 
-    return Container(
-      color: Colors.amber,
+    return Material(
+      type: MaterialType.transparency,
       child: Container(
         color: Colors.white,
         margin: EdgeInsets.only(top: 17.0),
@@ -223,7 +224,12 @@ class Profile extends StatelessWidget {
     Widget build(BuildContext context) {
       return Container(
         width: 150.0,
-        height: 200.0,
+//        height: 200.0,
+        child: Container(
+          alignment: Alignment.bottomLeft,
+          padding: EdgeInsets.only(left: 14.0, bottom: 16.0),
+          child: Text("Bali", style: TextStyle(fontSize: 14.0, color: Colors.white),),
+        ),
         decoration: BoxDecoration(
           image: DecorationImage(
             image: new AssetImage('assets/travel/travelphoto1.png'),
