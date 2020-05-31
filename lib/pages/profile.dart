@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_app_second/components/HorisontalTravelImage.dart';
+import 'package:flutter_app_second/components/HorizontalPlaces.dart';
 
 class Profile extends StatelessWidget {
 
@@ -155,13 +157,7 @@ class Profile extends StatelessWidget {
                   SizedBox(height: 20.0,),
                   Expanded(
                     child: Container(
-                      child: Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
-                        children: <Widget>[
-                          CorossolImage(),
-                          CorossolImage(),
-                        ],
-                      ),
+                      child: HorisontalTravelImage(),
                     ),
                   )
                 ],
@@ -185,14 +181,7 @@ class Profile extends StatelessWidget {
         Text("Trips she has taken in the past 12 months", style: TextStyle(fontSize: 14.0, color: Colors.grey)),
         SizedBox(height: 30.0,),
         Expanded(
-          child: Container(
-            child: Row(
-              children: <Widget>[
-                BottomImage(),
-//                BottomImage(),
-              ],
-            )
-          ),
+          child: HorizontalPlaces()
         ),
       ],
     ),
@@ -218,85 +207,3 @@ class Profile extends StatelessWidget {
   }
 }
 
-
-  class CorossolImage extends StatelessWidget {
-    @override
-    Widget build(BuildContext context) {
-      return Container(
-        width: 150.0,
-//        height: 200.0,
-        child: Container(
-          alignment: Alignment.bottomLeft,
-          padding: EdgeInsets.only(left: 14.0, bottom: 16.0),
-          child: Text("Bali", style: TextStyle(fontSize: 14.0, color: Colors.white),),
-        ),
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: new AssetImage('assets/travel/travelphoto1.png'),
-            fit: BoxFit.fill,
-          ),
-          borderRadius: BorderRadius.circular(5.0),
-        ),
-      );
-    }
-  }
-  
-  class BottomImage extends StatelessWidget {
-    @override
-    Widget build(BuildContext context) {
-      return Container(
-        width: 300.0,
-        decoration: BoxDecoration(
-          image: DecorationImage(
-            image: new AssetImage('assets/travel/bannertop1.png'),
-            fit: BoxFit.fill,
-          ),
-//        borderRadius: BorderRadius.circular(5.0),
-        ),
-        child: Stack(
-          children: <Widget>[
-            Container(
-              margin: EdgeInsets.only(left: 20.0, top: 20.0),
-              alignment: Alignment.centerLeft,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.start,
-                children: <Widget>[
-                  Row(
-                    children: <Widget>[
-                      Text("7", style: TextStyle(fontSize: 15.0, color: Colors.black, backgroundColor: Colors.white)  ),
-                      SizedBox(width: 5.0,),
-                      Text("day trip", style: TextStyle(fontSize: 14.0, color: Colors.white,),),
-                    ],
-                  ),
-//                  Text("IN ROUTE", style: TextStyle(fontSize: 14.0, color: Colors.amber,),),
-                ],
-              ),
-            ),
-            Container(
-              margin: EdgeInsets.only(right: 20.0, top: 20.0),
-              alignment: Alignment.topRight,
-              child: Column(
-                crossAxisAlignment: CrossAxisAlignment.end,
-                children: <Widget>[
-                  Text("Wed, 4 NOV", style: TextStyle(fontSize: 14.0, color: Colors.white,),),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    children: <Widget>[
-                      Icon(Icons.flight_takeoff, color: Colors.white,),
-                      Text(" OSLO ", style: TextStyle(fontSize: 14.0, color: Colors.white,),),
-                      Icon(Icons.brightness_1, size: 10.0, color: Colors.white,),
-                      Icon(Icons.brightness_1, size: 10.0, color: Colors.white,),
-                      Icon(Icons.brightness_1, size: 10.0, color: Colors.white,),
-
-                      Text(" JAPAN", style: TextStyle(fontSize: 14.0, color: Colors.white,),),
-                    ],
-                  ),
-                ],
-              ),
-            ),
-          ],
-        ),
-      );
-    }
-  }
-  

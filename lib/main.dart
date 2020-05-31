@@ -10,7 +10,7 @@ void main() {
     debugShowCheckedModeBanner: false,
     initialRoute: '/',
     routes: {
-      '/': (context) => Guide1(),
+      '/': (context) => Profile(),
       '/home': (context) => HomePage(),
 
     },
